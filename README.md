@@ -68,7 +68,7 @@ npm start
 
 ### **1️⃣ Clone the Backend Repository**
 ```bash
-git clone https://github.com/YourGitHubUsername/video-manager-backend.git
+git clone https://github.com/prathampl/video-manager-backend.git
 cd video-manager-backend
 ```
 
