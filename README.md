@@ -43,7 +43,7 @@ Welcome to the **Video Manager** 🚀, a full-stack web application built with *
 
 ### **1️⃣ Clone the Repository**
 ```bash
-git clone https://github.com/YourGitHubUsername/video-manager.git
+git clone https://github.com/prathampl/video-manager.git
 cd video-manager
 ```
 
