@@ -1,70 +1,157 @@
-# Getting Started with Create React App
+# 🎥 Video Manager - Full-Stack Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the **Video Manager** 🚀, a full-stack web application built with **⚛️ React.js** for the frontend and **🟢 Node.js + 🚚 Express.js** for the backend. The project features **📺 YouTube** playlist management with **↔️ drag-and-drop** functionality, **🔒 OTP-based authentication**, and **💾 persistent layout storage** using **🍃 MongoDB**.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## **✨ Features**
 
-### `npm start`
+### **🎨 Frontend (⚛️ React.js)**
+- **🔐 User Authentication:** OTP-based login with secure **🔑 JWT tokens**.
+- **📺 YouTube Integration:** Fetches and displays YouTube playlists.
+- **↔️ Drag-and-Drop Support:** Interactive playlist rearrangement using **↔️ React DnD**.
+- **💾 Persistent Layouts:** Save and load playlists from a **🍃 MongoDB** database.
+- **📱 Responsive Design:** Fully responsive **💻 UI**.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### **🛠️ Backend (🟢 Node.js + 🚚 Express.js)**
+- **🔐 Authentication API:** OTP generation, verification, and **🔑 JWT-based protected routes**.
+- **📋 Playlist Management:** Save and load playlist layouts.
+- **💾 Database Integration:** Stores **👤 user data** and playlists in **🍃 MongoDB**.
+- **🛡️ API Security:** **🌐 CORS-enabled, 🔑 JWT-protected APIs**.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## **⚙️ Technologies Used**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### **🎨 Frontend:**
+- ⚛️ React.js
+- 📡 Axios
+- 🧭 React Router DOM
+- ↔️ React DnD
 
-### `npm run build`
+### **🛠️ Backend:**
+- 🟢 Node.js
+- 🚚 Express.js
+- 🍃 MongoDB + Mongoose
+- 🔑 JWT (jsonwebtoken)
+- 🔒 Bcrypt.js
+- 🧾 Dotenv
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## **🖥️ Project Setup**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### **1️⃣ Clone the Repository**
+```bash
+git clone https://github.com/YourGitHubUsername/video-manager.git
+cd video-manager
+```
 
-### `npm run eject`
+### **2️⃣ Install Dependencies**
+```bash
+npm install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### **3️⃣ Create a `.env` File (Frontend)**
+```
+REACT_APP_API_BASE_URL=http://localhost:5000/api
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### **4️⃣ Start the Frontend Server**
+```bash
+npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## **🛠️ Backend Setup**
 
-## Learn More
+### **1️⃣ Clone the Backend Repository**
+```bash
+git clone https://github.com/YourGitHubUsername/video-manager-backend.git
+cd video-manager-backend
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### **2️⃣ Install Dependencies**
+```bash
+npm install
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### **3️⃣ Create a `.env` File (Backend)**
+```
+MONGO_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/videoManager?retryWrites=true&w=majority
+JWT_SECRET=your_secret_key
+```
 
-### Code Splitting
+### **4️⃣ Start the Backend Server**
+```bash
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## **🚀 Deployment**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. **🎨 Frontend Deployment:** Hosted on [Vercel](https://vercel.com/)
+2. **🛠️ Backend Deployment:** Hosted on [Render](https://render.com/) or [Heroku](https://heroku.com/)
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## **📡 API Endpoints Overview**
 
-### Advanced Configuration
+### **🔐 Authentication Endpoints:**
+- **📤 POST** `/api/auth/send-otp` - Sends **🔒 OTP** to the user's email.
+- **📤 POST** `/api/auth/verify-otp` - Verifies **🔒 OTP** and returns **🔑 JWT token**.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### **💾 Layout Management Endpoints:**
+- **📥 POST** `/api/layout/save` - Saves **📋 playlist layout**.
+- **📥 GET** `/api/layout/load/:userId` - Loads the saved **📋 layout**.
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## **📂 Folder Structure**
 
-### `npm run build` fails to minify
+### **🎨 Frontend (⚛️ React.js)**
+```
+/src
+  /components
+    Header.js
+    Login.js
+    YouTubeImport.js
+  /services
+    api.js
+  App.js
+  index.js
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### **🛠️ Backend (🟢 Node.js + 🚚 Express.js)**
+```
+/server
+  /models
+    Layout.js
+    User.js
+  /routes
+    authRoutes.js
+    layoutRoutes.js
+  /middleware
+    authMiddleware.js
+  server.js
+  .env
+```
+
+---
+
+## **📜 License**
+This project is licensed under the **MIT License**. See the LICENSE file for details.
+
+---
+
+## **📞 Contact**
+For any questions or inquiries, feel free to reach out:
+
+- **👤 Pratham P L**
+- 📧 Email: [prathampl9@gmail.com](mailto:prathampl9@gmail.com)
+- 🔗 LinkedIn: [LinkedIn Profile](https://linkedin.com/in/prathampl)
+
+Thank you for checking out the project! 🎉
+
